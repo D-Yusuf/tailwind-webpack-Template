@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "src"), // Specify the root directory for serving files
+      directory: path.resolve(__dirname, "./"), // Specify the root directory for serving files
     },  },
   module: {
     rules: [
