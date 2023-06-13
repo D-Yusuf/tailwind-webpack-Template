@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "src"),
     filename: "bundle.js",
   },
   watch: true,
@@ -12,12 +12,12 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"), // Specify the root directory for serving files
+      directory: path.resolve(__dirname, "src"), // Specify the root directory for serving files
     },  },
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/, 
         use: ["style-loader", "css-loader", "postcss-loader"],
         include: /src/,
       },
